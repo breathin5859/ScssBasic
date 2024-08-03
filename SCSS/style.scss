@@ -1,0 +1,17 @@
+// 1. 추상적인 파일 - 컴파일 되지 않는 파일. 순서대로 import
+//     1-1 변수
+//     1-2 함수
+//     1-3 믹스인
+// 2. 컴파일된파일
+//     2-1 reset
+//     2-2 typograpy
+//     - 컴포넌트 정의
+//     - 페이징정의
+//     - 레이아웃정의 등등
+
+@import "variable";
+@import "function"; // scss 연결 끼리는 확장자 안붙임
+@import "mixin";
+@import "reset";
+@import "space";
+@import "content1";
