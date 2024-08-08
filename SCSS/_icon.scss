@@ -25,3 +25,13 @@
     display: inline-flex;
   }
 }
+
+.nav-down {
+  @include align(center);
+
+  &::after {
+    @include background("ico_nav_down.svg", center);
+    content: "";
+    display: inline-flex;
+  }
+}

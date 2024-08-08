@@ -1,0 +1,62 @@
+.location-wrap {
+  // &:has(.depth2:popover-open) {
+  //   > li {
+  //     border: none;
+  //   }
+  // }
+  @include align(center, null);
+  > li {
+    & ~ li {
+      button {
+        @include borderLeft(rem(1), $graye1);
+      }
+    }
+    &.on {
+      box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.1);
+    }
+    &.--active {
+      > button {
+        @include text(inherit, rem(26), 700, null, rem(-1.3));
+        text-decoration-line: underline;
+      }
+    }
+    > button {
+      anchor-name: --location;
+
+      @include text($black, rem(24), null, null, rem(-1.2));
+      @include borderBottom(rem(1), $graye1);
+      padding: 0 rem(30);
+      min-width: rem(360);
+      height: rem(100);
+      background: $white;
+
+      &.nav-down {
+        @include align(center, space-between);
+
+        &::after {
+          @include icon(rem(19), rem(11), false);
+        }
+      }
+    }
+  }
+  .depth2 {
+    @include border(rem(1), transparent);
+    position: absolute;
+    inset: anchor(--location bottom) auto auto anchor(--loaciton left);
+    // padding: rem(30) rem(126) rem(50) rem(31);
+    > li {
+      &.--active {
+        a {
+          @include text($black33, rem(32), 700, null, null);
+        }
+      }
+      > a {
+        @include text($gray66, rem(26), null, null, null);
+        display: block;
+        padding: rem(10) rem(126) rem(10) rem(31);
+        width: rem(360);
+        box-sizing: border-box;
+      }
+    }
+  }
+}

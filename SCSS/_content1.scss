@@ -3,7 +3,7 @@ h2 {
 }
 
 .heading-type1 {
-  @include text($gray33, rem(20), 700, normal, -1px);
+  @include text($black33, rem(20), 700, normal, -1px);
 }
 
 .text-type1 {
@@ -19,7 +19,7 @@ h2 {
 }
 
 .btn-type1 {
-  @include text($gray33, rem(14), 700, rem(20), rem(-0.5));
+  @include text($black33, rem(14), 700, rem(20), rem(-0.5));
   @include background("ico_btn1.svg", right rem(12) center);
   @include border(1, $graybd);
   display: flex;
@@ -44,7 +44,7 @@ h2 {
     }
   }
   &__title {
-    @include text($gray33, rem(14), 700, rem(20), rem(-0.5));
+    @include text($black33, rem(14), 700, rem(20), rem(-0.5));
     width: 100%;
   }
   &__name {
