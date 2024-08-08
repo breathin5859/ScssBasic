@@ -1,12 +1,16 @@
+h2 {
+  @include a11y-hidden;
+}
+
 .heading-type1 {
-  @include text(#333, rem(20), 700, normal, -1px);
+  @include text($gray33, rem(20), 700, normal, -1px);
 }
 
 .text-type1 {
-  @include text(#005bac, rem(16), null, rem(24), null);
+  @include text($blue00, rem(16), null, rem(24), null);
 }
 .text-type2 {
-  @include text(#777, rem(14), null, rem(22), rem(0.5));
+  @include text($gray77, rem(14), null, rem(22), rem(0.5));
 }
 .image-type1 {
   img {
@@ -15,10 +19,44 @@
 }
 
 .btn-type1 {
-  @include text(#333, rem(14), 700, rem(20), rem(-0.5));
-  @include background("ico_btn1.sbg", right rem(12) center);
+  @include text($gray33, rem(14), 700, rem(20), rem(-0.5));
+  @include background("ico_btn1.svg", right rem(12) center);
+  @include border(1, $graybd);
   display: flex;
-  border: rem(1) solid #bdbdbd;
+  align-items: center;
   height: rem(48);
   padding-inline: rem(12);
+}
+
+.list-type1 {
+  li {
+    & ~ li {
+      @include borderTop(rem(1), $grayf1);
+    }
+  }
+  a {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+
+    .content2 & {
+      padding-block: rem(20);
+    }
+  }
+  &__title {
+    @include text($gray33, rem(14), 700, rem(20), rem(-0.5));
+    width: 100%;
+  }
+  &__name {
+    @include text($gray99, rem(14), null, rem(22), rem(-0.5));
+  }
+  &__tel {
+    @include text($gray99, rem(14), null, rem(22), rem(-0.5));
+  }
+  &__email {
+    @include background("ico_email.svg", center);
+    width: 18px;
+    height: 14px;
+    align-self: center;
+  }
 }

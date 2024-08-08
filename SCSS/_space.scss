@@ -1,7 +1,49 @@
+$mb: 20, 30;
+$mi: 8;
 $mt: 20, 30;
+
+$p: 20, 30;
+$pb: 20, 30;
+$pi: 8, 20;
+$pt: 20, 30;
+
+// margin
+@each $item in $mb {
+  .mb#{$item} {
+    margin-block: rem($item);
+  }
+}
+@each $item in $mi {
+  .mb#{$item} {
+    margin-inline: rem($item);
+  }
+}
 
 @each $item in $mt {
   .mt#{$item} {
     margin-top: rem($item);
+  }
+}
+
+// padding
+@each $item in $p {
+  .p#{$item} {
+    padding: rem($item);
+  }
+}
+
+@each $item in $pb {
+  .pb#{$item} {
+    padding-block: rem($item);
+  }
+}
+@each $item in $pi {
+  .pi#{$item} {
+    padding-inline: rem($item);
+  }
+}
+@each $item in $pt {
+  .pt#{$item} {
+    padding-block: rem($item);
   }
 }

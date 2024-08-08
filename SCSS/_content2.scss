@@ -1,0 +1,47 @@
+// list_component
+.list-type2 {
+  li {
+    & ~ li {
+      @include borderTop(rem(1), $grayf1);
+    }
+  }
+  a {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  span {
+    @include text(#999, null, null, rem(22), rem(-0.5));
+  }
+
+  &__title {
+    @include ellipsis;
+    width: 100%;
+  }
+}
+
+// list-type2 layout
+.content3 {
+  .list-type2 {
+    a {
+      gap: 4px 12px;
+    }
+
+    &__title {
+      @include text(#333, null, 700, rem(20), rem(-0.5));
+      height: rem(20);
+    }
+    .notice {
+      &::after {
+        @include icon(rem(20), rem(20), true);
+        background-color: #94c0e9;
+        background-size: rem(8) auto;
+      }
+    }
+    .view {
+      &::before {
+        @include icon(rem(14), rem(10), null);
+      }
+    }
+  }
+}

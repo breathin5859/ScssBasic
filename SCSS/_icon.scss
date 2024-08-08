@@ -1,0 +1,27 @@
+@use "sass:math";
+
+.notice {
+  @include align(center);
+  &::after {
+    @include background("ico_mic.svg", center);
+    content: "";
+    display: inline-flex;
+  }
+}
+
+.view {
+  @include align(center);
+  &::before {
+    @include background("ico_view.svg", center);
+    content: "";
+    display: inline-flex;
+  }
+}
+
+.more {
+  &::after {
+    @include background("ico_more_ye.svg", center);
+    content: "";
+    display: inline-flex;
+  }
+}
